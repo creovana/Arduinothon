@@ -945,3 +945,290 @@ footer {
   0% { text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff; }
   100% { text-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff; }
 }
+
+/* === NEW SECTIONS: Glassmorphic + Neon Style === */
+
+#phases, #schedule, #facilities {
+  background: rgba(20, 20, 30, 0.7);
+  border: 2px solid rgba(120, 0, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(120, 0, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.2);
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  color: #e0e0ff;
+  animation: fadeInUpGlass 1.5s ease-in-out;
+}
+
+#phases h2, #schedule h2, #facilities h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00eaff, #b700ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 2rem;
+  animation: pulseNeon 3s infinite alternate;
+}
+
+.phase-card, .facility-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(150, 0, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.phase-card:hover, .facility-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #8a2be2;
+}
+
+.phase-card h3, .facility-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #a0fffb;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* Event Schedule Table */
+.schedule-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.schedule-row:hover {
+  background: rgba(180, 0, 255, 0.1);
+  transform: scale(1.02);
+}
+.schedule-row span {
+  font-size: 1.2rem;
+  color: #f0f0ff;
+}
+.schedule-row.header {
+  background: linear-gradient(90deg, #6a00ff, #00eaff);
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Facility Grid */
+.facility-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.facility-card {
+  width: 28%;
+}
+
+@keyframes fadeInUpGlass {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseNeon {
+  0% { text-shadow: 0 0 10px #00eaff, 0 0 20px #b700ff; }
+  100% { text-shadow: 0 0 25px #b700ff, 0 0 40px #00eaff; }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  #phases, #schedule, #facilities {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .schedule-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .facility-card {
+    width: 90%;
+  }
+}
+
+/* 🌟 Distinguished Leadership Section */
+#leadership {
+  background: rgba(20, 20, 30, 0.7);
+  border: 2px solid rgba(0, 255, 153, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 153, 0.2);
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  color: #e0fff8;
+  animation: fadeInUpGlass 1.5s ease-in-out;
+}
+
+#leadership h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00eaff, #00ff99);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 2rem;
+  animation: pulseNeon 3s infinite alternate;
+}
+
+.leaders-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.leader-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 28%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ffcc, 0 0 50px #00c6ff;
+}
+
+.leader-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.leader-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #00eaff;
+  margin-bottom: 0.3rem;
+}
+
+.leader-card h4 {
+  font-size: 1.2rem;
+  color: #00ff99;
+  margin-bottom: 0.5rem;
+}
+
+.leader-card p {
+  font-size: 1rem;
+  color: #f0f0f0;
+  line-height: 1.4;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .leader-card {
+    width: 80%;
+  }
+}
+
+/* 📸 Arduinothon 2.0 Auto-Sliding Photo Gallery */
+#gallery {
+  background: rgba(20, 20, 30, 0.7);
+  border: 2px solid rgba(0, 198, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 198, 255, 0.3), 0 0 40px rgba(0, 255, 153, 0.2);
+  width: 85%;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  color: #e0fff8;
+  overflow: hidden;
+  animation: fadeInUpGlass 1.5s ease-in-out;
+}
+
+#gallery h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00eaff, #00ff99);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 2rem;
+  animation: pulseNeon 3s infinite alternate;
+}
+
+/* Carousel styling */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 198, 255, 0.3);
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* double to allow continuous loop */
+  animation: slideCarousel 25s linear infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 255, 153, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.3), 0 0 30px rgba(0, 198, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00ffcc, 0 0 45px #00c6ff;
+}
+
+/* Continuous sliding animation */
+@keyframes slideCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #gallery h2 {
+    font-size: 2rem;
+  }
+  .carousel-track img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 0.5rem;
+  }
+}
+
+/* 🖱️ Pause carousel on hover */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
