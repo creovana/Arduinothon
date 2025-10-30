@@ -1232,3 +1232,71 @@ footer {
 .carousel-container:hover .carousel-track {
   animation-play-state: paused;
 }
+
+
+/* ✅ Improved Mobile Responsiveness */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav img {
+    width: 30%;
+  }
+
+  nav div {
+    text-align: center;
+  }
+
+  .hero div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hero img {
+    width: 20%;
+    max-width: 70px;
+  }
+
+  .prize,
+  .feature,
+  .contact-item,
+  .leader-card,
+  .facility-card {
+    width: 90% !important;
+  }
+
+  #about,
+  #rules,
+  #prize-pool,
+  #facilities,
+  #phases,
+  #schedule,
+  #leadership,
+  #contact,
+  #gallery {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  h1, h2, h3, h4, p {
+    word-wrap: break-word;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .highlight-banner {
+    font-size: 1.3rem;
+  }
+
+  .carousel-track img {
+    max-width: 85%;
+    margin: 0.3rem auto;
+  }
+}
